@@ -1,0 +1,58 @@
+<div class="container">
+    <div class="col-lg-12">
+
+        <div class="col-lg-4 registerSection">
+            <div class="col-lg-12">
+                <h1>SIGN UP</h1>
+            </div>
+            <form #registerForm="ngForm">
+                <div class="input-group">
+                    <span class="input-group-addon">Full Name</span>
+                    <input type="text" #fullName="ngModel" class="form-control" [(ngModel)]="name" name="name" placeholder="Your Name Here" required>
+                </div>
+                <div *ngIf="fullName.touched && fullName.invalid" class="red">
+                    <div *ngIf="fullName.errors.required"> Name is Mandatory </div>
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon">Email</span>
+                    <input type="text" #eid="ngModel" class="form-control" name="email" [(ngModel)]="email" placeholder="Your Email Here" required>
+                </div>
+                <div *ngIf="eid.touched && eid.invalid" class="red">
+                    <div *ngIf="eid.errors.required"> Email is Mandatory </div>
+                    <div *ngIf="eid.errors.pattern"> Enter Valid Email </div>
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon">Mobile</span>
+                    <input type="text" class="form-control" name="mobile" pattern="(^\d{10}$)" [(ngModel)]="mobile" placeholder="Your Contact Here"
+                        required #mob="ngModel">
+                </div>
+                <div *ngIf="mob.touched && mob.invalid" class="red">
+                    <div *ngIf="mob.errors.required"> Mobile is Mandatory </div>
+                    <div *ngIf="mob.errors.pattern"> Enter Valid Mobile </div>
+                </div>
+
+                <div class="input-group">
+                    <span class="input-group-addon">Password</span>
+                    <input type="password" #pass="ngModel" class="form-control" name="password" [(ngModel)]="password" placeholder="Your Password Here"
+                        required>
+                </div>
+
+                <div *ngIf="pass.touched && pass.invalid" class="red">
+                    <div *ngIf="pass.errors.required"> Password is Mandatory </div>
+                </div>
+
+                <button type="button" class="col-lg-4 btn btn-success" [disabled]="!registerForm.form.valid" (click)="register(registerForm)">Register</button>
+                <button type="button" class="col-lg-4 btn btn-success pull-right" [routerLink]="['/login']">Back to Login</button>
+            </form>
+        </div>
+
+        <div class="col-lg-8">
+            <div class="col-lg-12 text-center">
+                <h1>Property Types</h1>
+            </div>
+            <div class="col-lg-6 noPadding margin-top-15" *ngFor="let i of [1,2,3,4]">
+                <img src="../../assets/bunglow.jpg" height="180" width="300" class="borderForImages" />
+            </div>
+        </div>
+    </div>
+</div>

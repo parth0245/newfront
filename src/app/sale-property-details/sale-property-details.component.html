@@ -1,0 +1,204 @@
+<div class="container filterSection">
+  <div class="col-lg-6 detailsHead">
+    Property Details
+  </div>
+
+  <div class="col-lg-6 text-right" *ngIf="propertyDetails">
+    <button class="btn btn-success" (click)="contactWithOwner()">Contact now</button>
+  </div>
+
+
+  <div class="col-lg-12 caption" *ngIf="propertyDetails">
+    {{propertyDetails[0].propertyCaption}}
+    <span *ngIf="propertyDetails[0].societyName">in {{propertyDetails[0].societyName}}</span>
+  </div>
+
+
+  <div class="col-lg-4" *ngIf="propertyDetails">
+    <img [src]="propertyDetails[0].images[0].file" height="350" width="350" />
+    <button class="btn btn-success margin-top-20 morePropBtn">More Property Photos +</button>
+    <button class="btn btn-danger margin-top-20 morePropBtn">Report</button>
+  </div>
+  <div class="col-lg-8" *ngIf="propertyDetails">
+    <div class="col-lg-12 caption">
+      <div class="col-lg-4">
+        <div>Price</div>
+        <div>{{propertyDetails[0].propertyMainPrice}}</div>
+      </div>
+      <div class="col-lg-4">
+        <div>For</div>
+        <div>{{propertyDetails[0].propertyFor}}</div>
+      </div>
+      <div class="col-lg-4">
+        <div>Area</div>
+        <div>{{propertyDetails[0].propertyCarpetArea + " - sq" + propertyDetails[0].propertyCarpetAreaUnit}}</div>
+      </div>
+    </div>
+
+
+    <div class="col-lg-12 caption">
+      <div class="col-lg-4">
+        <div>Bedrooms</div>
+        <div>{{propertyDetails[0].propertyBedrooms}}</div>
+      </div>
+      <div class="col-lg-4">
+        <div>Balcony</div>
+        <div>{{propertyDetails[0].propertyBalconies}}</div>
+      </div>
+      <div class="col-lg-4">
+        <div>Bathroom</div>
+        <div>{{propertyDetails[0].propertyBathrooms}}</div>
+      </div>
+    </div>
+
+    <div class="col-lg-12 caption">
+      <div class="col-lg-4">
+        <div>Type</div>
+        <div>{{propertyDetails[0].availablility}}</div>
+      </div>
+      <div class="col-lg-4">
+        <div>Open sides</div>
+        <div>{{propertyDetails[0].propertyOpenSides}}</div>
+      </div>
+      <div class="col-lg-4">
+        <div>Parking</div>
+        <div>{{propertyDetails[0].parking}}</div>
+      </div>
+    </div>
+
+    <div class="col-lg-12 caption">
+      <div class="col-lg-4">
+        <div>Status</div>
+        <div>{{propertyDetails[0].propertyStatus}}</div>
+      </div>
+      <div class="col-lg-4">
+        <div>Floor</div>
+        <div>{{propertyDetails[0].propertyYourFloor}} of {{propertyDetails[0].propertyTotalFloors}}</div>
+      </div>
+      <div class="col-lg-4">
+        <div>Furnish status</div>
+        <div>{{propertyDetails[0].propertyFurnishedStatus}}</div>
+      </div>
+    </div>
+
+    <div class="col-lg-12 caption">
+      <div class="col-lg-4">
+        <div>Property Age</div>
+        <div>{{propertyDetails[0].ageOrAvailableFrom}}</div>
+      </div>
+      <div class="col-lg-4">
+        <div>Construction</div>
+        <div>{{propertyDetails[0].propertyConstructionAllowed}}</div>
+      </div>
+      <div class="col-lg-4">
+        <div>Property Type</div>
+        <div>{{propertyDetails[0].propertyType}}</div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-12 noPadding-left" *ngIf="propertyDetails">
+    <div class="col-lg-12 caption noPadding-left">
+      <div class="col-lg-4">
+        <div>Property Location</div>
+        <div>{{propertyDetails[0].propertyLocation}}</div>
+      </div>
+      <div class="col-lg-4">
+        <div>Property Address</div>
+        <div>{{propertyDetails[0].address}}</div>
+      </div>
+      <div class="col-lg-4">
+        <div>Property Landmark</div>
+        <div>{{propertyDetails[0].propertyLandmark}}</div>
+      </div>
+    </div>
+    <div class="col-lg-12 caption ">
+      <div class="col-lg-12 desc noPadding-left">
+        <div>Property Description</div>
+        <div>{{propertyDetails[0].propertyDesc}}</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container filterSection margin-top-20">
+  <div class="col-lg-12 detailsHead">
+    Owner Details
+  </div>
+  <div class="col-lg-2 margin-top-20" *ngIf="propertyDetails">
+    <img src="../../assets/profile.png" height="150" width="150" />
+  </div>
+  <div class="col-lg-10 caption" *ngIf="propertyDetails">
+    <div class="col-lg-4">
+      <div>Name</div>
+      <div>{{ownerName}}</div>
+    </div>
+    <div class="col-lg-4">
+      <div>Mobile</div>
+      <div>{{propertyDetails[0].mobile}}</div>
+    </div>
+    <div class="col-lg-4">
+      <div>Email</div>
+      <div>{{propertyDetails[0].email}}</div>
+    </div>
+  </div>
+  <div class="col-lg-10 text-right">
+    <button class="btn btn-success" style="width:30%;margin-right: 15px;">Contact now</button>
+  </div>
+</div>
+
+
+<div class="container filterSection margin-top-20">
+  <div class="col-lg-12 detailsHead">
+    Send Enquiry
+  </div>
+  <form *ngIf="email">
+    <div class="col-lg-3 caption">
+      <div class="input-group">
+        <span class="input-group-addon">Full Name</span>
+        <input type="text" class="form-control" [(ngModel)]="username" name="name" disabled>
+      </div>
+    </div>
+
+    <div class="col-lg-3 caption">
+      <div class="input-group">
+        <span class="input-group-addon">Email</span>
+        <input type="text" class="form-control" name="email" [(ngModel)]="email" disabled>
+      </div>
+    </div>
+
+    <div class="col-lg-3 caption">
+      <div class="input-group">
+        <span class="input-group-addon">Mobile</span>
+        <input type="text" class="form-control" name="mobile" pattern="(^\d{10}$)" [(ngModel)]="mobile" disabled>
+      </div>
+    </div>
+
+
+
+    <div class="col-lg-3">
+      <button class="btn btn-success enquiryBtn">Enquire Now</button>
+    </div>
+  </form>
+  <div *ngIf="!email" class="caption text-center">Please Login to send enquiry</div>
+</div>
+
+
+
+<div class="container filterSection margin-top-20">
+  <div class="col-lg-12 detailsHead">
+    Disclaimer
+  </div>
+  <div class="col-lg-12 caption">
+    The house endeavours to display on its platform(s), relevant information relating to a particular Property/Project for general
+    informational purpose, including Property/project details, listings, floor area, location, maps etc. The details so published
+    are based on collection of information and data from multiple sources on best effort basis and should not be deemed to
+    constitute advertisements, solicitations, marketing, offer for sale, invitation to offer, invitation to acquire, by the
+    developer/builder or any other entity. The imagery used herein may not represent actuals or may be indicative of style
+    only. No information given creates a warranty or expands the scope of any warranty that cannot be disclaimed under applicable
+    law. The house is not responsible for any loss or damage including, without limitation, indirect or consequential loss
+    or damage, suffered by anyone due to use of or reliance on the content(s) of this site/App without independently verifying
+    with the concerned developer/builder. Anyone using this site/app or relying on the content(s) therein is doing so at
+    his/her/it's sole risk and consequences without any recourse to the house. The house reserves the right to revoke, modify,
+    alter, add and delete any one or more of the information without any notification.
+  </div>
+</div>

@@ -1,0 +1,144 @@
+<div class="container filterSection">
+    <!-- Filter-Section Starts -->
+    <div class="col-lg-12">
+      <div class="col-lg-3">
+        <div class="form-group">
+          <select class="form-control">
+            <option>Area</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="form-group">
+          <select class="form-control">
+            <option>Status</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="form-group">
+          <select class="form-control">
+            <option>Location</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="form-group">
+          <select class="form-control">
+            <option>Types</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-12">
+      <div class="col-lg-3">
+        <div class="form-group">
+          <select class="form-control">
+            <option>Bedrooms</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="form-group">
+          <select class="form-control">
+            <option>Bathroom</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="form-group">
+          <select class="form-control">
+            <option>Price</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <button type="button" class="col-lg-12 btn btn-success">Search</button>
+      </div>
+    </div>
+    <!-- Filter-Section Ends -->
+  </div>
+
+  <div class="container listContainer">
+      <h2 class="text-center padding-bottom-20 color-green">All PG</h2>
+      <div *ngIf="PGProperty.length==0" class="noProp">OOPS.... No PG Found</div>
+      <div *ngIf="PGProperty.length!=0">
+        <div class="col-lg-4" *ngFor="let i of PGProperty">
+          <div class="thumbnail property">
+            <img src="../../assets/bunglow.jpg" alt="" class="zoom" *ngIf="i.images.length==0" style="height:250px;">
+            <img src="{{i.images[0].file}}" alt="" class="zoom" *ngIf="i && i.images.length>0" style="height:250px;">
+            <div class="property-tag button sale">PG</div>
+            <div class="caption">
+              <h3>{{i.propertyCaption}}</h3>
+              <h4>Rs {{i.propertyPrice}}</h4>
+              <h4>Owner ID : {{i.email}}</h4>
+              <div class="padding-bottom-5 padding-top-5">
+                <span class="glyphicon glyphicon-map-marker"></span>
+                <span>{{i.propertyLocation}}</span>
+              </div>
+              <div class="row padding-bottom-5 padding-top-5">
+                <div class="col-lg-4 ">
+                    <span class="glyphicon glyphicon-ok" *ngIf="i.propertyFurnishedStatus[0] == 'TV'"></span>
+                    <span class="glyphicon glyphicon-remove redCross" *ngIf="i.propertyFurnishedStatus[0] != 'TV'"></span>
+                  <span>TV</span>
+                </div>
+                <div class="col-lg-4">
+                    <span class="glyphicon glyphicon-ok" *ngIf="i.propertyFurnishedStatus[1] == 'AC'"></span>
+                    <span class="glyphicon glyphicon-remove redCross" *ngIf="i.propertyFurnishedStatus[1] != 'AC'"></span>
+                  <span>AC</span>
+                </div>
+                <div class="col-lg-4">
+                    <span class="glyphicon glyphicon-ok" *ngIf="i.propertyFurnishedStatus[5] == 'Cooler'"></span>
+                    <span class="glyphicon glyphicon-remove redCross" *ngIf="i.propertyFurnishedStatus[5] != 'Cooler'"></span>
+                  <span>Cooler</span>
+                </div>
+              </div>
+              <div class="row padding-bottom-5 padding-top-5">
+                <div class="col-lg-4">
+                    <span class="glyphicon glyphicon-ok" *ngIf="i.propertyFurnishedStatus[2] == 'Washing Machine'"></span>
+                    <span class="glyphicon glyphicon-remove redCross" *ngIf="i.propertyFurnishedStatus[2] != 'Washing Machine'"></span>
+                  <span>Wash Machine</span>
+                </div>
+                <div class="col-lg-4">
+                    <span class="glyphicon glyphicon-ok" *ngIf="i.propertyFurnishedStatus[3] == 'Bed'"></span>
+                    <span class="glyphicon glyphicon-remove redCross" *ngIf="i.propertyFurnishedStatus[3] != 'Bed'"></span>
+                  <span>Bed</span>
+                </div>
+                <div class="col-lg-4">
+                    <span class="glyphicon glyphicon-ok" *ngIf="i.propertyFurnishedStatus[4] == 'Wifi'"></span>
+                    <span class="glyphicon glyphicon-remove redCross" *ngIf="i.propertyFurnishedStatus[4] != 'Wifi'"></span>
+                  <span>Wifi</span>
+                </div>
+              </div>
+              <div class="row padding-bottom-5 padding-top-5">
+                <div class="col-lg-4">
+                    <span class="glyphicon glyphicon-ok" *ngIf="i.propertyFurnishedStatus[6] == 'Geyser'"></span>
+                    <span class="glyphicon glyphicon-remove redCross" *ngIf="i.propertyFurnishedStatus[6] != 'Geyser'"></span>
+                  <span>Geyser</span>
+                </div>
+                <div class="col-lg-4">
+                    <span class="glyphicon glyphicon-ok" *ngIf="i.propertyFurnishedStatus[7] == 'Fridge'"></span>
+                    <span class="glyphicon glyphicon-remove redCross" *ngIf="i.propertyFurnishedStatus[7] != 'Fridge'"></span>
+                  <span>Fridge</span>
+                </div>
+                <div class="col-lg-4">
+                    <span class="glyphicon glyphicon-ok" *ngIf="i.propertyFurnishedStatus[8] == 'Study Table'"></span>
+                    <span class="glyphicon glyphicon-remove redCross" *ngIf="i.propertyFurnishedStatus[8] != 'Study Table'"></span>
+                  <span>Study Table</span>
+                </div>
+              </div>
+              <div class="row padding-bottom-5 padding-top-20 border-top-agent">
+                <div class="col-lg-6">
+                  <span class="glyphicon glyphicon-user"></span>
+                  <span>+91-{{i.mobile}}</span>
+                </div>
+                <div class="col-lg-6 text-right">
+                  <span class="	glyphicon glyphicon-calendar"></span>
+                  <span>{{i.date}}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>

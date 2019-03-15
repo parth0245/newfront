@@ -1,0 +1,52 @@
+<div class="col-lg-12">
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Sell or Rent your Property</h1>
+      <p>You will post your property for
+        <span class="green">1000</span> Rs.</p>
+      <div>
+        <h3>Personal Details</h3>
+        <div>
+          <div>
+            <form>
+              <div class="form-check">
+                <label>
+                  I Am :
+                </label>
+              </div>
+              <div class="form-check">
+                <label>
+                  <input type="radio" name="radio" (click)="setIam('owner')">
+                  <span class="label-text">Owner</span>
+                </label>
+              </div>
+              <!-- <div class="form-check">
+                <label>
+                  <input type="radio" name="radio" (click)="setIam('agent')">
+                  <span class="label-text">Agent</span>
+                </label>
+              </div> -->
+              <div class="form-check">
+                <label>
+                  <input type="radio" name="radio" (click)="setIam('builder')">
+                  <span class="label-text">Builder</span>
+                </label>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" *ngIf="agent">
+
+      </div>
+      <div class="row" *ngIf="builder">
+        
+      </div>
+
+      <div class="row" *ngIf="owner">
+        <app-owener-property-submit></app-owener-property-submit>
+      </div>
+    </div>
+  </div>
+</div>

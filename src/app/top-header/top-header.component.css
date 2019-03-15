@@ -1,0 +1,15 @@
+.topHeader {
+    background-color: #20272a;
+    height:40px;
+    color: white;
+    font-size: 15px;
+}
+.emailContent {
+    padding-top: 10px;
+}
+.emailText {
+    padding-left: 5px;
+}
+.paddingRight{
+    padding-right: 10px;
+}

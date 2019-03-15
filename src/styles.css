@@ -1,0 +1,152 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Pathway+Gothic+One');
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+html , body , .container-fluid {
+    margin:0;
+    padding:0;
+    font-family: 'Pathway Gothic One', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+button{
+    border-radius: 0px !important;
+}
+.margin-top-20 {
+    margin-top:20px;
+}
+#carouselExampleCaptions img{
+    height: 350px;
+}
+.margin-left-20{
+    margin-left: 20px;
+}
+.margin-top-15{
+    margin-top: 15px;
+}
+.margin-top-20{
+    margin-top: 20px;
+}
+.margin-top-50{
+    margin-top: 50px;
+}
+.margin-bottom-20 {
+    margin-bottom: 20px;
+}
+.margin-right-5{
+    margin-right: 10px;
+}
+.padding-top-5{
+    padding-top:5px;
+}
+.padding-top-10{
+    padding-top:10px;
+}
+.padding-top-20{
+    padding-top:20px;
+}
+.padding-bottom-5{
+    padding-bottom:5px;
+}
+.padding-bottom-10{
+    padding-bottom:10px;
+}
+.border-top-agent {
+    border-top: 1px solid #ccc;
+}
+.padding-bottom-20 {
+    padding-bottom: 20px;
+}
+.noPadding{
+    padding:0px;
+}
+.noPadding-left{
+    padding-left: 0px !important;
+}
+.padding-right-5{
+    padding-right: 5px;
+}
+.cursorPointer {
+    cursor: pointer;
+}
+.green {
+    color:#95c41f;
+    border-bottom:1px solid #95c41f;
+}
+.zoom:hover {
+    transform: scale(1.1);
+}
+select.form-control{
+    padding:4px 12px;
+}
+.red {
+    color:red;
+    font-size: 16px;
+    font-weight: bold;
+}
+.redCross{
+    color:red !important;
+}
+
+/*  */
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    outline: 0;
+    background-color: rgba(243, 239, 239, 0.5);
+}
+ 
+.fade {
+    opacity: 0;
+    -webkit-transition: opacity .15s linear;
+    -o-transition: opacity .15s linear;
+    transition: opacity .15s linear;
+}
+ 
+.fade.in {
+    opacity: 1;
+}
+ 
+.modal-dialog {
+    position: relative;
+    width: auto;
+    margin: 10px;
+}
+ 
+.modal.in .modal-dialog {
+    -webkit-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+    -o-transform: translate(0,0);
+    transform: translate(0,0);
+}
+ 
+.modal.fade .modal-dialog {
+    -webkit-transition: -webkit-transform .3s ease-out;
+    -o-transition: -o-transform .3s ease-out;
+    transition: transform .3s ease-out;
+    -webkit-transform: translate(0,-25%);
+    -ms-transform: translate(0,-25%);
+    -o-transform: translate(0,-25%);
+    transform: translate(0,-25%);
+}
+.modal-content {
+    margin-top: 150px;
+}
+.modal-title{
+    font-size: 25px;
+    font-weight: bold;
+}
+.modal-body{
+    font-size: 20px;
+}
+@media (min-width: 768px) {
+    .modal-dialog {
+        width: 600px;
+        margin: 30px auto;
+    }
+}
+/*  */

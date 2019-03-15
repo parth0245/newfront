@@ -1,0 +1,35 @@
+<div class="container"><div class="col-lg-12 text-center padding-bottom-10 padding-top-10">
+  <h1>Select a plan before proceeding</h1>
+</div>
+<div class="columns col-lg-4">
+    <ul class="price1">
+      <li class="header">Details</li>
+      <li class="black">Visible to number of Buyers</li>
+      <li>Validity of your Property Ad</li>
+      <li class="black">Get Mobile No. of Buyers</li>
+      <li>Higher Position of Property in Search</li>
+      <li class="black">Verified Tag on Property *</li>
+      <li>Emails to Promote Your Property</li>
+      <li class="black">Fixed spot for your property on top</li>
+      <li>Property Description By Experts</li>
+      <li class="black">Price</li>
+    </ul>
+  </div>
+<div class="columns col-lg-2" *ngFor="let i of [1,2,3,4]">
+  <ul class="price">
+    <li class="header">Basic</li>
+    <li class="black">100 Buyers</li>
+    <li>70 Days</li>
+    <li class="black">X</li>
+    <li>X</li>
+    <li class="black">X</li>
+    <li>X</li>
+    <li class="black">X</li>
+    <li>X</li>
+    <li class="black">800 Rs</li>
+    <li class="grey margin-top-15">
+      <a href="#" class="button" [routerLink]="['/dashboard/proprty-details']">Buy</a>
+    </li>
+  </ul>
+</div>
+</div>

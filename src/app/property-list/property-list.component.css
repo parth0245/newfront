@@ -1,0 +1,50 @@
+.btn-success{
+    background-color: #95c41f;
+    border-color: #95c41f;
+    padding: 5px 25px;
+    font-size: 20px;
+}
+.color-green {
+    color: #95c41f;
+}
+.filterSection {
+    background: #e6e6e6;
+    padding: 40px 0 20px;
+    border-radius: 20px;
+}
+.form-control {
+    font-size: 16px;
+}
+.listContainer{
+    margin-top:50px;
+    border-top: 5px solid #95c41f;
+    border-top-style: dotted;
+}
+.listContainer .glyphicon{
+    padding-right: 5px;
+    color: #95c41f;
+}
+.property .button{
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 2px;
+    color: white;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+    z-index: 20;
+}
+.property-tag.sale {
+    top: 10px;
+    right: 25px;
+}
+.property-tag {
+position: absolute;
+}
+.noProp {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}

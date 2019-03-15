@@ -1,0 +1,41 @@
+.btn-group{
+    outline: none;
+}
+input[type="checkbox"], input[type="radio"]{
+	position: absolute;
+	right: 9000px;
+}
+input[type="radio"] + .label-text:before {
+	content: "\f10c";
+	font-family: "FontAwesome";
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing:antialiased;
+	width: 1em;
+	display: inline-block;
+	margin-right: 5px;
+}
+
+input[type="radio"]:checked + .label-text:before{
+	content: "\f192";
+	color: #95c41f;
+	animation: effect 250ms ease-in;
+}
+.form-check {
+    display: inline;
+    padding-right: 20px;
+    font-size: 18px;
+}
+.input-group {
+    padding-top:10px;
+    padding-bottom:10px;
+}
+.btn-success{
+    background-color: #95c41f;
+    border-color: #95c41f;
+    padding: 5px 15px;
+    font-size: 18px;
+}

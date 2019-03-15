@@ -1,0 +1,16 @@
+<header class="topHeader col-lg-12">
+    <div class="col-lg-9 emailContent">
+      <span class="glyphicon glyphicon-envelope"></span>
+      <span class="emailText">thehouse@gmail.com</span>
+    </div>
+    <div class="col-lg-3 emailContent text-right">
+      <span *ngIf="!UserIsAuthenticated" class="glyphicon glyphicon-triangle-right"></span>
+      <span *ngIf="!UserIsAuthenticated" class="emailText paddingRight cursorPointer"  routerLink="/login">Login</span>
+      <span *ngIf="!UserIsAuthenticated" class="glyphicon glyphicon-triangle-right"></span>
+      <span *ngIf="!UserIsAuthenticated" class="emailText cursorPointer" routerLink="/register">Register</span>
+      <span *ngIf="UserIsAuthenticated" class="glyphicon glyphicon-triangle-right"></span>
+      <span *ngIf="UserIsAuthenticated" class="emailText cursorPointer padding-right-5" (click)="onLogout()">Logout</span>
+      <span *ngIf="UserIsAuthenticated" class="glyphicon glyphicon-triangle-right"></span>
+      <span *ngIf="UserIsAuthenticated" class="emailText cursorPointer" (click)="goToMyProfile()">My profile</span>
+    </div>
+  </header>

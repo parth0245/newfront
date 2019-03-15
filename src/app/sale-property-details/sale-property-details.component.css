@@ -1,0 +1,57 @@
+.filterSection {
+    background: #e6e6e6;
+    padding: 40px 0 40px 20px;
+    border-radius: 20px;
+}
+.detailsHead{
+    font-size: 30px;
+}
+.caption{
+    font-size: 24px;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+.morePropBtn{
+    width: 99.5%;
+}
+.col-lg-4 div:first-child{
+    background-color: #20272a;
+    text-align: center;
+    color: #95c41f;
+}
+.desc div:first-child{
+    background-color: #20272a;
+    color: #95c41f;
+    padding:15px;
+}
+.col-lg-4 div:nth-child(2){
+    text-align: center;
+    background-color: white;
+}
+.desc div:nth-child(2){
+    background-color: white;
+    padding:15px;
+}
+.container .col-lg-4 img,.container .col-lg-2 img{
+    border:5px solid #20272a;
+}
+.col-lg-8 .caption ,.col-lg-10.caption ,.col-lg-12.caption{
+    font-size: 20px;
+    margin-top:20px;
+ }
+ .btn-success{
+    background-color: #95c41f;
+    border-color: #95c41f;
+    padding: 5px 25px;
+    font-size: 20px;
+}
+.btn-success.enquiryBtn{
+    padding: 1px 25px !important;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+.btn-danger{
+    padding: 5px 25px;
+    font-size: 20px;
+}
